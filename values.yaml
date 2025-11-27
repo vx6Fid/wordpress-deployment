@@ -3,6 +3,8 @@ wordpressPassword: admin123
 wordpressEmail: "admin@example.com"
 wordpressBlogName: "WordPress Updated"
 
+replicaCount: 2   
+
 service:
   type: ClusterIP
 
