@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     env:
-      KUBECONFIG: /home/achal/Documents/Projects/action-runner/kubeconfig
+      KUBECONFIG: /home/achal/.kube/config
 
     steps:
       - name: Checkout repo
