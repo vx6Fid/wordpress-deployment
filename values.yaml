@@ -1,0 +1,25 @@
+wordpressUsername: admin
+wordpressPassword: admin123
+wordpressEmail: "admin@example.com"
+wordpressBlogName: "vx6Fid"
+
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  hostname: wordpress.test
+  path: /
+  tls: false
+
+persistence:
+  enabled: true
+  size: 10Gi
+
+mariadb:
+  auth:
+    rootPassword: rootpassword
+    username: bn_wordpress
+    password: wordpresspass
+    database: bitnami_wordpress
+
