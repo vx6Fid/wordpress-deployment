@@ -7,6 +7,8 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
+    env:
+      KUBECONFIG: /home/achal/Documents/Projects/action-runner/kubeconfig
 
     steps:
       - name: Checkout repo
@@ -15,6 +17,11 @@ jobs:
       - name: Verify kubectl access
         run: kubectl get nodes
 
+      - name: Add Helm repo
+        run: |
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo update
+
       - name: Helm upgrade WordPress
         run: |
           RELEASE=$(cat helm-release-name.txt)
@@ -22,4 +29,3 @@ jobs:
           helm upgrade $RELEASE bitnami/wordpress \
               -n $NAMESPACE \
               -f values.yaml
-
