@@ -1,7 +1,7 @@
 wordpressUsername: admin
 wordpressPassword: admin123
 wordpressEmail: "admin@example.com"
-wordpressBlogName: "vx6Fid"
+wordpressBlogName: "WordPress Updated"
 
 service:
   type: ClusterIP
