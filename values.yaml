@@ -4,7 +4,7 @@ wordpressEmail: "admin@example.com"
 wordpressBlogName: "WordPress Updated"
 
 commonAnnotations:
-  rollout-trigger: "v4"
+  rollout-trigger: "v6"
 
 service:
   type: ClusterIP
